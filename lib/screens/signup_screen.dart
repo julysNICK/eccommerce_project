@@ -29,7 +29,7 @@ class SignupScreen extends StatelessWidget {
                     TextFormField(
                       decoration: const InputDecoration(
                         hintText: 'Enter your name',
-                        labelText: 'Email',
+                        labelText: 'Name',
                         border: OutlineInputBorder(),
                         errorBorder: OutlineInputBorder(
                           borderSide: BorderSide(
