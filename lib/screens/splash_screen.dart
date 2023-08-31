@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:ecommerce_project/screens/home_screen.dart';
 import 'package:ecommerce_project/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
