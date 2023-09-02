@@ -1,3 +1,4 @@
+import 'package:ecommerce_project/widgets/product_details_popup.dart';
 import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -87,9 +88,10 @@ class _ProductScreenState extends State<ProductScreen> {
                           size: 30,
                         ),
                       ),
-                    )
+                    ),
+                    const ProductDetailsPopup(),
                   ],
-                )
+                ),
               ],
             ),
           ),
