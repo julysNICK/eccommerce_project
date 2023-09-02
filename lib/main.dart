@@ -1,5 +1,5 @@
 import 'package:ecommerce_project/screens/navigation_screen.dart';
-import 'package:ecommerce_project/screens/splash_screen.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
