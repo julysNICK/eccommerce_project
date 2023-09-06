@@ -34,7 +34,7 @@ class ProductDetailsPopup extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(30),
+              padding: const EdgeInsets.all(15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

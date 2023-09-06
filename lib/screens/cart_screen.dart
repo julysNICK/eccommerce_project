@@ -1,3 +1,6 @@
+import 'package:ecommerce_project/screens/payment_method_screen.dart';
+import 'package:ecommerce_project/widgets/container_button_modal.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatelessWidget {
@@ -55,7 +58,7 @@ class CartScreen extends StatelessWidget {
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) {
                     return Container(
-                      margin: const EdgeInsets.symmetric(vertical: 10),
+                      margin: const EdgeInsets.symmetric(vertical: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -69,8 +72,8 @@ class CartScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                             child: Image.asset(
                               imageList[index],
-                              height: 100,
-                              width: 100,
+                              height: 80,
+                              width: 80,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -109,12 +112,106 @@ class CartScreen extends StatelessWidget {
                                 ),
                               ),
                             ],
-                          )
+                          ),
+                          const Row(
+                            children: [
+                              Icon(
+                                CupertinoIcons.minus,
+                                size: 20,
+                                color: Colors.green,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                "1",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.black87,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Icon(
+                                CupertinoIcons.add,
+                                size: 20,
+                                color: Color(0xFFDB3022),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     );
                   },
                 ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Select All",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black87,
+                    ),
+                  ),
+                  Checkbox(
+                    splashRadius: 20,
+                    activeColor: const Color(0xFFDB3022),
+                    value: false,
+                    onChanged: (value) {},
+                  ),
+                ],
+              ),
+              const Divider(
+                height: 10,
+                thickness: 2,
+                color: Colors.black,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Total Payment",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black87,
+                    ),
+                  ),
+                  Text(
+                    "\$300.50",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w900,
+                      color: Color(0xFFDB3022),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const PaymentMethodScreen();
+                  }));
+                },
+                child: ContainerButtonModal(
+                  itext: "Checkout",
+                  bgColor: const Color(0xFFDB3022),
+                  containerWidth: MediaQuery.of(context).size.width,
+                ),
+              ),
+              const SizedBox(
+                height: 20,
               ),
             ],
           ),

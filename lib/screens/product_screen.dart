@@ -20,6 +20,15 @@ class _ProductScreenState extends State<ProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Product Overview"),
+        leading: const BackButton(),
+        // backgroundColor: const Color(0xFFEF6969),
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.black,
+        elevation: 0,
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
