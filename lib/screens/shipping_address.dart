@@ -106,7 +106,7 @@ class ShippingAddress extends StatelessWidget {
                   child: ContainerButtonModal(
                     containerWidth: MediaQuery.of(context).size.width,
                     itext: "Add address",
-                    bgColor: const Color(0xFFEF6969),
+                    bgColor: const Color(0xFFDB3022),
                   ),
                 ),
               ],

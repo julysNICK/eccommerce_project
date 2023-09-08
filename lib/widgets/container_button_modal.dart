@@ -21,7 +21,7 @@ class ContainerButtonModal extends StatelessWidget {
         child: Text(
           itext,
           style: const TextStyle(
-            color: Colors.white70,
+            color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
