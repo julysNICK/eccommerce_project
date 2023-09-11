@@ -1,4 +1,5 @@
 import 'package:ecommerce_project/screens/navigation_screen.dart';
+import 'package:ecommerce_project/screens/splash_screen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -13,11 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Eccomerce App',
       theme: ThemeData(
         primaryColor: const Color(0xFFEF6969),
       ),
-      home: const NavigationScreen(),
+      home: const SplashScreen(),
     );
   }
 }
